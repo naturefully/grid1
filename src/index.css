@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in forwards;
+}
+
+/* Disable node dragging */
+.react-flow__node {
+  pointer-events: none !important;
+}
+
+/* Enable panning when dragging on nodes */
+.react-flow__pane {
+  cursor: grab !important;
+}
+
+.react-flow__pane:active {
+  cursor: grabbing !important;
+}
+
+/* Hide node resize controls */
+.react-flow__node-resizer,
+.react-flow__node-resizer-handle {
+  display: none !important;
+}
